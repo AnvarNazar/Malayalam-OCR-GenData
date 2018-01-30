@@ -7,6 +7,5 @@ public:
     std::string fileName;
     void readLetters();
     Letters(char *fileName);
-    ~Letters();
 };
 #endif // LETTERS_H

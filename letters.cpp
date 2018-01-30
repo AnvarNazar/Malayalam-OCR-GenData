@@ -25,7 +25,3 @@ Letters::Letters(char *fileName)
     this->fileName = fileName;
     readLetters();
 }
-
-Letters::~Letters()
-{
-}

@@ -32,7 +32,7 @@ public:
     int contourArea;
 
     std::string characterStringEntry;
-    std::vector<std::vector<cv::Point>> *ptContours;
+    std::vector<std::vector<cv::Point>> ptContours;
     int currentContour = 0;
     std::vector<cv::Vec4i> v4iHierarchy;
     cv::Mat matClassificationInts;

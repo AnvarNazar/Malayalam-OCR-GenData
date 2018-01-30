@@ -11,9 +11,7 @@ TrainingDialog::TrainingDialog(QWidget *parent, cv::Mat image, int minCharWidth,
     this->minCharHeight = minCharHeight;
     this->contourArea = contourArea;
 
-    ptContours = new std::vector<cv::Point>;
-
-    cv::findContours(image, &ptContours, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE);
+    cv::findContours(image, ptContours, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE);
     advanceContour();
     displayCharacter();
 }
@@ -69,7 +67,7 @@ void TrainingDialog::on_lineEdit_returnPressed()
 
 void TrainingDialog::on_cancelButton_clicked()
 {
-    this->~TrainingDialog();
+    TrainingDialog::close();
 }
 
 void TrainingDialog::on_saveButton_clicked()
