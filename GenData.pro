@@ -26,11 +26,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    charbutton.cpp
+    letters.cpp \
+    trainingdialog.cpp
 
 HEADERS += \
         mainwindow.h \
-    charbutton.h
+    trainingdialog.h \
+    letters.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    trainingdialog.ui
+
+LIBS += -lopencv_core -lopencv_imgcodecs -lopencv_imgproc
+
+RESOURCES +=
